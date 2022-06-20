@@ -1,0 +1,7 @@
+{
+  "*.vue": "bash -c 'npm run type-check'",
+  "*.{ts,tsx,vue}": [
+    "eslint",
+    "prettier --write"
+  ]
+}
