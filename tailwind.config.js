@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
@@ -9,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Open Sans', ...defaultTheme.fontFamily.sans],
+        'sans': ['Inter', ...defaultTheme.fontFamily.sans],
         'display': ['Darker Grotesque', ...defaultTheme.fontFamily.sans],
       }
     },

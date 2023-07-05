@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50"
+    class="flex items-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 border border-green-100"
     role="alert"
   >
     <svg

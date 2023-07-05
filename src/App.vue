@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col space-y-16">
+  <main class="flex flex-col space-y-12">
     <div class="bg-blue-900 h-12 border-b-2 border-yellow-500 shadow-md"></div>
 
     <div class="flex flex-col items-center space-y-4">
@@ -7,7 +7,7 @@
 
       <div class="text-center text-gray-900">
         <h3 class="font-display font-bold text-5xl">Sistemas Operacionais</h3>
-        <h2 class="font-display text-2xl">Simulador de Escalonamento</h2>
+        <h2 class="font-display text-3xl font-light">Simulador de Escalonamento</h2>
       </div>
     </div>
 
@@ -88,15 +88,15 @@
                   <SuccessAlert
                     v-if="usageCPU < 1"
                     title="Sucesso!"
-                    :message="`A taxa de uso da CPU é de ${(usageCPU * 100).toFixed(
-                      2,
+                    :message="`O uso da CPU é ${(usageCPU * 100).toFixed(
+                      0,
                     )}%, esse sistema é escalonável!`"
                   />
                   <DangerAlert
                     v-if="usageCPU >= 1"
-                    title="Não foi dessa vez!"
-                    :message="`A taxa de uso da CPU é de ${(usageCPU * 100).toFixed(
-                      2,
+                    title="Erro!"
+                    :message="`O uso da CPU é ${(usageCPU * 100).toFixed(
+                      0,
                     )}%, esse sistema não é escalonável!`"
                   />
                 </div>
@@ -185,7 +185,10 @@
 
         timeline.value = calculateScheduling(tasks);
         usageCPU.value = calculateUsageCPU(tasks);
-        openModal();
+
+        if (timeline.value.length > 0) {
+          openModal();
+        }
       };
       reader.readAsText(file);
     }

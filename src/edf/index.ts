@@ -9,7 +9,7 @@ function calculateUsageCPU(tasks: Task[]): number {
   let usage = 0;
 
   tasks.forEach(task => {
-    usage = usage + task.capacity / task.deadline;
+    usage = usage + task.capacity / task.period;
   });
 
   return usage;

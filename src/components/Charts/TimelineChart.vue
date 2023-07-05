@@ -47,5 +47,8 @@
       type: 'numeric',
       tickAmount: 10,
     },
+    dataLabels: {
+      enabled: true,
+    }
   };
 </script>

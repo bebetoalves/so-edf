@@ -1,5 +1,8 @@
 <template>
-  <div class="flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
+  <div
+    class="flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 border border-red-100"
+    role="alert"
+  >
     <svg
       class="flex-shrink-0 inline w-4 h-4 mr-3"
       aria-hidden="true"
