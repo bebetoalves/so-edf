@@ -37,11 +37,11 @@ function calculateScheduling(tasks: Task[]) {
       }
     }
 
-    const arrived = tasks.filter(task => (timer + 1) % task.period === 0);
-
-    arrived.forEach(task => {
-      task.current.capacity = task.capacity;
-      task.current.deadline = task.deadline + timer + 2;
+    tasks.forEach(task => {
+      if ((timer + 1) % task.period === 0) {
+        task.current.capacity = task.capacity;
+        task.current.deadline = task.deadline + timer + 2;
+      }
     });
   }
 
