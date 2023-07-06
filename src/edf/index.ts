@@ -32,9 +32,8 @@ function calculateScheduling(tasks: Task[]) {
         timeline[timeline.length - 1].end === timer
       ) {
         timeline[timeline.length - 1].end = timer + 1;
-        timeline[timeline.length - 1].length++;
       } else {
-        timeline.push({ task: activeTask, start: timer, end: timer + 1, length: 1 });
+        timeline.push({ task: activeTask, start: timer, end: timer + 1 });
       }
     }
 

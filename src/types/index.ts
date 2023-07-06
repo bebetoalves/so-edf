@@ -15,7 +15,6 @@ interface Timeline {
   task: Task;
   start: number;
   end: number;
-  length: number;
 }
 
 export type { Current, Task, Timeline };
